@@ -1,1 +1,11 @@
-//Write a program to find the sum of n different numbers using 4 functions
+#include<stdio.h>
+#include<stdio.h>
+int main()
+{
+	int a,b;
+	printf("enter the numbers");
+	scanf("%d %d",&a,&b);
+	printf("%d /n",a+b);
+	return 0;
+}
+
