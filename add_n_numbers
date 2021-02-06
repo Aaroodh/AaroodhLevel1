@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{ int a[100],i,j;int sum=0;
+    printf("specify the total number of elements you are going to enter \n");
+    scanf("%d",&j);
+    printf("enter the numbers\n");
+    for(i=0;i<j;i++){
+    scanf("%d",&a[i]);}
+    for(i=0;i<=j;i++)
+    { 
+        sum=sum+a[i];
+    }
+    
+    return printf("sum=%d",sum);
+}
