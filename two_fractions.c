@@ -1,5 +1,4 @@
 //WAP to find the sum of two fractions.
-
 #include <stdio.h>
 
 typedef struct fraction{
@@ -24,16 +23,26 @@ if(f1.d==f2.d){
     
     }
 else{
+int gcd=1,i;
+
     sum.d=f1.d*f2.d;
     sum.n=f1.n*f2.d+f2.n*f1.d;
+for(i=;i<=sum.n && i<=sum.d;i++)
+{
+	if((sum.n)%i==0 && (sum.d)%i==0)
+gcd=i; 
+}
+sum.d=(sum.d)/gcd;
+sum.n=sum.n/gcd;
+
 }
     return sum;
     
 }
 
-void display(frac b)
+void display(frac x,frac y,frac b)
 {
-    printf("sum=%d/%d",b.n,b.d);
+    printf("sum of %d/%d and %d/%d is =%d/%d",x.n,x.d,y.n,y.d,b.n,b.d);
 }
 
 int main()
@@ -41,6 +50,6 @@ int main()
     x=input();
     y=input();
     b=add(x,y);
-    display(b);
+    display(x,y,b);
     return 0;
 }
